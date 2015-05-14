@@ -102,5 +102,19 @@ function validateProxyName() {
 }
 
 function proxyCreated(name) {
-    document.location.href = '../service-mgt/index.jsp';    
+    document.location.href = '../service-mgt/index.jsp';
+}
+
+function validateProxyNameText(e) {
+    var key = String.fromCharCode(getkey(e));
+    if (key == null) {
+        return true;
+    }
+
+    var regEx = /[~!@#$%^&*()\\\/+=\:;<>'"?[\]{}|\s,]/;
+    if (regEx.test(key)) {
+        CARBON.showWarningDialog("Invalid character");
+        return false;
+    }
+    return true;
 }

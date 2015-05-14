@@ -1132,7 +1132,7 @@
                 </td>
                 <td align="left">
                     <% if (!nameDisabled) { %>
-                    <input id="psName" name="psName" type="text" value="<%=name%>" onchange="changePSN()"  onkeypress="return validateText(event)"/>
+                    <input id="psName" name="psName" type="text" value="<%=name%>" onchange="changePSN()"  onkeypress="return validateProxyNameText(event)"/>
                     <% } else { %>
                         <strong><%=name%></strong>
                     <% } %>
